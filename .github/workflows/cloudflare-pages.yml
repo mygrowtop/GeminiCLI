@@ -1,12 +1,14 @@
-name: Deploy to Cloudflare Pages
+name: Deploy to Cloudflare Pages (Disabled)
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
+    # 只有手动触发时才会运行
+  # push:
+  #   branches:
+  #     - main
+  # pull_request:
+  #   branches:
+  #     - main
 
 jobs:
   deploy:
