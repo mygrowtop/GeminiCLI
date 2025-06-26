@@ -43,6 +43,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Tutorial page navigation
+    const tutorialSections = document.querySelectorAll('.tutorial-section');
+    const tutorialNavLinks = document.querySelectorAll('.tutorial-nav a');
+    
+    if (tutorialSections.length > 0 && tutorialNavLinks.length > 0) {
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            tutorialSections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            tutorialNavLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    }
+
     // Mobile navigation toggle
     const createMobileNav = () => {
         if (window.innerWidth <= 768 && !document.querySelector('.mobile-nav-toggle')) {
