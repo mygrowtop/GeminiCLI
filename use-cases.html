@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Cases - GeminiCLI.net</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="container">
+                <a href="/" class="logo">GeminiCLI.net</a>
+                <div class="nav-links">
+                    <a href="/#features">Features</a>
+                    <a href="tutorial.html">Tutorial</a>
+                    <a href="use-cases.html">Use Cases</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="cheatsheet.html">Cheatsheet</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Powerful Use Cases</h1>
+            <p>Discover the versatile applications of Gemini CLI in your development workflow.</p>
+        </div>
+    </section>
+
+    <section class="use-cases-page">
+        <div class="container">
+            <div class="use-case-category">
+                <div class="use-case-header">
+                    <div class="icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h2>Code Generation & Debugging</h2>
+                </div>
+                <div class="use-case-details">
+                    <p class="use-case-intro">Generate boilerplate code, implement functions, or debug tricky issues directly from your terminal.</p>
+                    
+                    <div class="use-case-example">
+                        <h3>Generate Functions</h3>
+                        <p>Create complete functions by describing what you need:</p>
+                        <div class="code-block">gemini code "Create a Python function that downloads all images from a webpage and saves them to a specified directory"</div>
+                        <p class="example-result">
+                            Gemini will generate a complete Python function with error handling, comments, and best practices.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Debug Errors</h3>
+                        <p>Get help with error messages:</p>
+                        <div class="code-block">cat error.log | gemini debug</div>
+                        <p class="example-result">
+                            Gemini will analyze the error log, explain what went wrong, and suggest potential fixes.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Code Refactoring</h3>
+                        <p>Improve existing code:</p>
+                        <div class="code-block">gemini refactor --file script.js "Optimize this code for better performance"</div>
+                        <p class="example-result">
+                            Gemini will analyze your code and suggest optimizations while maintaining functionality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-category">
+                <div class="use-case-header">
+                    <div class="icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h2>Content Creation</h2>
+                </div>
+                <div class="use-case-details">
+                    <p class="use-case-intro">Draft emails, write documentation, create blog posts, or generate marketing copy without leaving your terminal.</p>
+                    
+                    <div class="use-case-example">
+                        <h3>Technical Documentation</h3>
+                        <p>Generate documentation for your code:</p>
+                        <div class="code-block">gemini document --file app.py "Create comprehensive documentation with examples"</div>
+                        <p class="example-result">
+                            Gemini will analyze your code and generate clear, well-structured documentation with usage examples.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Email Drafting</h3>
+                        <p>Create professional emails quickly:</p>
+                        <div class="code-block">gemini write "Draft a professional email to schedule a meeting with a client to discuss project milestones"</div>
+                        <p class="example-result">
+                            Gemini will generate a well-structured, professional email that you can customize and send.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Content Summaries</h3>
+                        <p>Summarize long articles or documents:</p>
+                        <div class="code-block">gemini summarize --url https://example.com/long-article</div>
+                        <p class="example-result">
+                            Gemini will fetch the article and provide a concise summary highlighting the key points.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-category">
+                <div class="use-case-header">
+                    <div class="icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h2>Quick Lookups & Learning</h2>
+                </div>
+                <div class="use-case-details">
+                    <p class="use-case-intro">Get instant answers to technical questions, learn new concepts, or get help with command syntax without context switching.</p>
+                    
+                    <div class="use-case-example">
+                        <h3>Technical Q&A</h3>
+                        <p>Get answers to technical questions:</p>
+                        <div class="code-block">gemini ask "What's the difference between promises and async/await in JavaScript?"</div>
+                        <p class="example-result">
+                            Gemini will provide a detailed explanation with examples comparing both approaches.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Command Syntax Help</h3>
+                        <p>Get help with complex commands:</p>
+                        <div class="code-block">gemini shell "How do I find all files modified in the last 7 days and copy them to a backup directory?"</div>
+                        <p class="example-result">
+                            Gemini will suggest the appropriate shell command with explanations of each part.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Concept Explanations</h3>
+                        <p>Learn about complex concepts:</p>
+                        <div class="code-block">gemini explain "How does Docker containerization work?"</div>
+                        <p class="example-result">
+                            Gemini will provide a clear, comprehensive explanation tailored to your level of understanding.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-category">
+                <div class="use-case-header">
+                    <div class="icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h2>Project Management & Planning</h2>
+                </div>
+                <div class="use-case-details">
+                    <p class="use-case-intro">Plan projects, generate tasks, create schedules, and organize work directly from your command line.</p>
+                    
+                    <div class="use-case-example">
+                        <h3>Project Planning</h3>
+                        <p>Create project outlines:</p>
+                        <div class="code-block">gemini plan "Create a development roadmap for building a weather app with React"</div>
+                        <p class="example-result">
+                            Gemini will provide a structured project plan with phases, tasks, and estimated timelines.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Task Breakdown</h3>
+                        <p>Generate detailed task lists:</p>
+                        <div class="code-block">gemini tasks "Break down the process of implementing user authentication in a Node.js application"</div>
+                        <p class="example-result">
+                            Gemini will create a comprehensive list of tasks with dependencies and implementation details.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Meeting Preparation</h3>
+                        <p>Prepare for meetings efficiently:</p>
+                        <div class="code-block">gemini prepare "Generate an agenda and talking points for a sprint planning meeting"</div>
+                        <p class="example-result">
+                            Gemini will create a well-structured meeting agenda with key topics and discussion points.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Try These Use Cases?</h2>
+            <p>Start using Gemini CLI today and transform your development workflow.</p>
+            <a href="/#get-started" class="btn primary">Get Started Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 GeminiCLI.net - An unofficial fan-made resource hub for Google's Gemini CLI.</p>
+            <p>This site is not affiliated with Google. All product names, logos, and brands are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
