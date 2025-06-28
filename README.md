@@ -1,10 +1,10 @@
-# GeminiCLI.net
+# GeminiCLI
 
-This repository contains the source code for [GeminiCLI.net](https://geminicli.mygrow.top/), an unofficial resource hub for Google's Gemini CLI.
+This repository contains the source code for [GeminiCLI](https://geminicli.mygrow.top/), an unofficial resource hub for Google's Gemini CLI.
 
 ## About
 
-GeminiCLI.net provides tutorials, guides, and resources to help users master Google's Gemini CLI tool. The site includes:
+GeminiCLI provides tutorials, guides, and resources to help users master Google's Gemini CLI tool. The site includes:
 
 - Comprehensive tutorials
 - Use case examples
