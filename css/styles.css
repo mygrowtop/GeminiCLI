@@ -212,6 +212,9 @@ section {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .feature-card:hover {
@@ -220,18 +223,22 @@ section {
 
 .feature-card h3 {
     margin-bottom: 0.8rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
 }
 
 .feature-card p {
     margin-bottom: 0;
     line-height: 1.5;
+    height: 6rem;
 }
 
 /* Get Started */
 .steps-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
     margin-top: 2rem;
 }
 
@@ -241,6 +248,10 @@ section {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .step-number {
@@ -333,23 +344,29 @@ section {
 
 .tutorial-card {
     background-color: #fff;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
     border-left: 4px solid var(--primary-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .tutorial-card h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
-    font-size: 1.25rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
 }
 
 .tutorial-card p {
     margin-bottom: 1.5rem;
-    line-height: 1.7;
-    color: #333;
+    flex-grow: 1;
+    height: 8rem;
+    overflow: hidden;
 }
 
 .tutorial-card:hover {
@@ -357,12 +374,14 @@ section {
 }
 
 .read-more {
-    display: inline-block;
-    font-weight: 500;
     color: var(--primary-color);
+    font-weight: 500;
+    margin-top: auto;
+    display: block;
 }
 
 .read-more:hover {
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
@@ -734,6 +753,16 @@ footer {
     .faq-container, 
     .tutorials-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .feature-card h3,
+    .tutorial-card h3 {
+        height: auto;
+    }
+    
+    .feature-card p,
+    .tutorial-card p {
+        height: auto;
     }
     
     .tutorials-layout {
