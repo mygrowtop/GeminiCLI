@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini CLI Cheatsheet - GeminiCLI.net</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34JTHH0E0P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-34JTHH0E0P');
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .cheatsheet-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .command-section {
+            margin-bottom: 3rem;
+        }
+        
+        .command-section h2 {
+            text-align: left;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .command-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .command-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .command-tag {
+            font-size: 0.8rem;
+            background-color: var(--light-bg);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 0.8rem;
+            font-weight: normal;
+            color: #666;
+        }
+        
+        .syntax {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 0.8rem;
+            border-radius: var(--border-radius);
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .options-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .options-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .options-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        .example-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+        
+        .best-practices {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-top: 3rem;
+        }
+        
+        .best-practices h2 {
+            text-align: center;
+            border-bottom: none;
+        }
+        
+        .practices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .practice-card {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+        }
+        
+        .practice-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .practice-card h3 {
+            margin-bottom: 0.8rem;
+        }
+        
+        .quick-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .quick-nav a {
+            background-color: var(--light-bg);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .quick-nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        
+        .attribution {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="container">
+                <a href="/" class="logo">GeminiCLI.net</a>
+                <div class="nav-links">
+                    <a href="index.html#features">Features</a>
+                    <a href="tutorial.html">Tutorial</a>
+                    <a href="use-cases.html">Use Cases</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="cheatsheet.html" class="active">Cheatsheet</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Gemini CLI Command Reference</h1>
+            <p>Complete list of commands, parameters, and usage examples to master all Gemini CLI features</p>
+        </div>
+    </section>
+
+    <section class="cheatsheet-content">
+        <div class="container cheatsheet-container">
+            <div class="quick-nav">
+                <a href="#basic-commands">Basic Commands</a>
+                <a href="#advanced-commands">Advanced Commands</a>
+                <a href="#file-operations">File Operations</a>
+                <a href="#configuration">Configuration</a>
+            </div>
+
+            <div id="basic-commands" class="command-section">
+                <h2>Basic Commands</h2>
+                <p>Core commands to quickly get started with Gemini CLI</p>
+                
+                <div class="command-card">
+                    <h3>gemini <span class="command-tag">Basic</span></h3>
+                    <p>The main interactive command for conversing with Gemini AI</p>
+                    
+                    <h4>Syntax</h4>
+                    <div class="syntax">gemini [options] [query]</div>
+                    
+                    <h4>Common Options</h4>
+                    <ul class="options-list">
+                        <li><strong>--model</strong> - Specify which model to use (default: gemini-2.5-pro)</li>
+                        <li><strong>--temperature</strong> - Control output randomness (0.0-1.0)</li>
+                        <li><strong>--max-tokens</strong> - Limit output length</li>
+                        <li><strong>--help</strong> - Show help information</li>
+                    </ul>
+                    
+                    <h4>Examples</h4>
+                    <p class="example-title">Basic conversation</p>
+                    <div class="syntax">gemini "Hello, please introduce yourself"</div>
+                    
+                    <p class="example-title">Specify model</p>
+                    <div class="syntax">gemini --model gemini-2.5-flash "Quick answer to this question"</div>
+                </div>
+                
+                <div class="command-card">
+                    <h3>gemini auth <span class="command-tag">Authentication</span></h3>
+                    <p>Manage Google account authentication and authorization</p>
+                    
+                    <h4>Syntax</h4>
+                    <div class="syntax">gemini auth [subcommand]</div>
+                    
+                    <h4>Subcommands</h4>
+                    <ul class="options-list">
+                        <li><strong>login</strong> - Log in to Google account</li>
+                        <li><strong>logout</strong> - Log out of current account</li>
+                        <li><strong>status</strong> - Check authentication status</li>
+                    </ul>
+                    
+                    <h4>Examples</h4>
+                    <p class="example-title">Log in to account</p>
+                    <div class="syntax">gemini auth login</div>
+                    
+                    <p class="example-title">Check status</p>
+                    <div class="syntax">gemini auth status</div>
+                </div>
+                
+                <div class="command-card">
+                    <h3>gemini help <span class="command-tag">Help</span></h3>
+                    <p>Display command help information and documentation</p>
+                    
+                    <h4>Syntax</h4>
+                    <div class="syntax">gemini help [command]</div>
+                    
+                    <h4>Examples</h4>
+                    <p class="example-title">Show all commands</p>
+                    <div class="syntax">gemini help</div>
+                    
+                    <p class="example-title">Show specific command help</p>
+                    <div class="syntax">gemini help auth</div>
+                </div>
+            </div>
+
+            <div id="advanced-commands" class="command-section">
+                <h2>Advanced Commands</h2>
+                <p>Advanced features and complex operations</p>
+                
+                <div class="command-card">
+                    <h3>gemini chat <span class="command-tag">Advanced</span></h3>
+                    <p>Start an interactive chat session with multi-turn dialogue support</p>
+                    
+                    <h4>Syntax</h4>
+                    <div class="syntax">gemini chat [options]</div>
+                    
+                    <h4>Options</h4>
+                    <ul class="options-list">
+                        <li><strong>--model</strong> - Specify model</li>
+                        <li><strong>--system-prompt</strong> - Set system prompt</li>
+                        <li><strong>--history</strong> - Save conversation history</li>
+                    </ul>
+                    
+                    <h4>Examples</h4>
+                    <p class="example-title">Start chat</p>
+                    <div class="syntax">gemini chat</div>
+                    
+                    <p class="example-title">Chat with system prompt</p>
+                    <div class="syntax">gemini chat --system-prompt "You are a Python expert"</div>
+                </div>
+                
+                <div class="command-card">
+                    <h3>gemini stream <span class="command-tag">Streaming</span></h3>
+                    <p>Stream responses, showing generated content in real-time</p>
+                    
+                    <h4>Syntax</h4>
+                    <div class="syntax">gemini stream [query]</div>
+                    
+                    <h4>Examples</h4>
+                    <p class="example-title">Stream generation</p>
+                    <div class="syntax">gemini stream "Write a Python function"</div>
+                </div>
+            </div>
+
+            <div id="file-operations" class="command-section">
+                <h2>File Operations</h2>
+                <p>Commands for reading, analyzing, and processing files</p>
+                
+                <div class="command-card">
+                    <h3>gemini read <span class="command-tag">File</span></h3>
+                    <p>Read and analyze file contents</p>
+                    
+                    <h4>Syntax</h4>
+                    <div class="syntax">gemini read [file_path] [query]</div>
+                    
+                    <h4>Options</h4>
+                    <ul class="options-list">
+                        <li><strong>--encoding</strong> - Specify file encoding</li>
+                        <li><strong>--max-size</strong> - Limit file size</li>
+                    </ul>
+                    
+                    <h4>Examples</h4>
+                    <p class="example-title">Analyze code file</p>
+                    <div class="syntax">gemini read app.py "Find issues in this code"</div>
+                    
+                    <p class="example-title">Summarize document</p>
+                    <div class="syntax">gemini read README.md "Summarize the main features of this project"</div>
+                </div>
+                
+                <div class="command-card">
+                    <h3>gemini write <span class="command-tag">File</span></h3>
+                    <p>Generate content and write to file</p>
+                    
+                    <h4>Syntax</h4>
+                    <div class="syntax">gemini write [file_path] [query]</div>
+                    
+                    <h4>Examples</h4>
+                    <p class="example-title">Generate code file</p>
+                    <div class="syntax">gemini write calculator.py "Create a simple calculator class"</div>
+                    
+                    <p class="example-title">Generate documentation</p>
+                    <div class="syntax">gemini write API.md "Generate API documentation for this project"</div>
+                </div>
+            </div>
+
+            <div id="configuration" class="command-section">
+                <h2>Configuration Commands</h2>
+                <p>Manage Gemini CLI configuration and settings</p>
+                
+                <div class="command-card">
+                    <h3>gemini config <span class="command-tag">Configuration</span></h3>
+                    <p>Manage CLI configuration options</p>
+                    
+                    <h4>Syntax</h4>
+                    <div class="syntax">gemini config [subcommand] [options]</div>
+                    
+                    <h4>Subcommands</h4>
+                    <ul class="options-list">
+                        <li><strong>get</strong> - Get configuration value</li>
+                        <li><strong>set</strong> - Set configuration value</li>
+                        <li><strong>list</strong> - List all configurations</li>
+                        <li><strong>reset</strong> - Reset configuration</li>
+                    </ul>
+                    
+                    <h4>Examples</h4>
+                    <p class="example-title">Set default model</p>
+                    <div class="syntax">gemini config set default-model gemini-2.5-flash</div>
+                    
+                    <p class="example-title">View configuration</p>
+                    <div class="syntax">gemini config list</div>
+                </div>
+            </div>
+
+            <div class="best-practices">
+                <h2>Best Practices</h2>
+                <div class="practices-grid">
+                    <div class="practice-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Clear Queries</h3>
+                        <p>Use specific, clear queries and avoid vague descriptions</p>
+                    </div>
+                    <div class="practice-card">
+                        <i class="fas fa-wrench"></i>
+                        <h3>Use Options Wisely</h3>
+                        <p>Choose appropriate models and parameters to balance speed and quality</p>
+                    </div>
+                    <div class="practice-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>File Operations</h3>
+                        <p>Use read and write commands to process files efficiently</p>
+                    </div>
+                    <div class="practice-card">
+                        <i class="fas fa-cog"></i>
+                        <h3>Configuration</h3>
+                        <p>Configure default settings to reduce repetitive input</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attribution">
+                <p>Command reference information sourced from <a href="https://geminicli.info/commands.html" target="_blank">geminicli.info</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 geminicli.mygrow.top - An unofficial fan-made resource hub for Google's Gemini CLI.</p>
+            <p>This site is not affiliated with Google. All product names, logos, and brands are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
