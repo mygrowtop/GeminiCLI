@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini CLI 博客 - GeminiCLI.net</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34JTHH0E0P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-34JTHH0E0P');
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .blog-post {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .blog-post h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .blog-post .meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .blog-post .meta .source {
+            margin-right: 1rem;
+        }
+        
+        .blog-post .meta .date {
+            margin-right: 1rem;
+        }
+        
+        .blog-post .meta .author {
+            font-style: italic;
+        }
+        
+        .blog-post .content {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .blog-post .read-more {
+            display: inline-block;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="container">
+                <a href="/" class="logo">GeminiCLI.net</a>
+                <div class="nav-links">
+                    <a href="index.html#features">特性</a>
+                    <a href="tutorial.html">教程</a>
+                    <a href="use-cases.html">使用案例</a>
+                    <a href="faq.html">常见问题</a>
+                    <a href="blog.html" class="active">博客</a>
+                    <a href="cheatsheet.html">速查表</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Gemini CLI 博客</h1>
+            <p>收集了关于Gemini CLI的最新博客文章、教程和使用技巧</p>
+        </div>
+    </section>
+
+    <section class="blog-content">
+        <div class="container blog-container">
+            <div class="blog-post">
+                <h3>Gemini CLI: 谷歌开源AI助手</h3>
+                <div class="meta">
+                    <span class="source">来源: Google Blog</span>
+                    <span class="date">2025年6月25日</span>
+                    <span class="author">作者: Taylor Mullen & Ryan J. Salva</span>
+                </div>
+                <div class="content">
+                    <p>谷歌推出了Gemini CLI，这是一款开源AI助手，可以直接在开发者的终端中运行。Gemini CLI不仅擅长编码，还可以用于内容生成、问题解决、深度研究和任务管理等多种用途。它提供了轻量级访问Gemini的方式，让你可以从提示到模型获得最直接的路径。</p>
+                    <p>使用个人Google账户登录即可免费使用Gemini CLI，获取Gemini 2.5 Pro及其100万token的上下文窗口。为确保你在预览期间几乎不会遇到限制，我们提供了业界最大的免费配额：每分钟60个模型请求，每天1000个请求。</p>
+                </div>
+                <a href="https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/" target="_blank" class="read-more">阅读全文 →</a>
+            </div>
+
+            <div class="blog-post">
+                <h3>Gemini CLI 教程系列</h3>
+                <div class="meta">
+                    <span class="source">来源: Medium</span>
+                    <span class="date">2025年6月</span>
+                    <span class="author">作者: Romin Irani</span>
+                </div>
+                <div class="content">
+                    <p>欢迎来到Gemini CLI教程系列。Gemini CLI是一个开源AI助手，它将Gemini的强大功能直接引入你的终端。你可以将它用于编码相关任务以及其他任务，它集成了各种工具，支持MCP服务器，最重要的是，它是开源的，并提供慷慨的免费层级。</p>
+                    <p>在本系列的第一部分，我们将了解如何为Gemini CLI设置我们的机器。此外，我们将从一两个基本提示开始，看看它是如何工作的。我们将在后续部分深入研究配置、上下文和更多设置，但在这一部分，我们将保持简单，只介绍几个初始步骤。</p>
+                </div>
+                <a href="https://medium.com/google-cloud/gemini-cli-tutorial-series-77da7d494718" target="_blank" class="read-more">阅读全文 →</a>
+            </div>
+
+            <div class="blog-post">
+                <h3>掌握Gemini CLI - 你的AI驱动开发终端</h3>
+                <div class="meta">
+                    <span class="source">来源: Medium</span>
+                    <span class="date">2025年6月</span>
+                    <span class="author">作者: Kristopher Dunham</span>
+                </div>
+                <div class="content">
+                    <p>命令行一直是开发者的忠实伙伴，但现在它将获得重大的智能升级。谷歌新发布的Gemini CLI不仅仅是另一个AI工具，它是一个智能代理，将你的终端转变为一个对话式工作空间，自然语言与代码执行在此交汇。</p>
+                    <p>想象一下，用简单的英语描述一个复杂的调试任务，然后看着AI推理问题，检查你的文件，并执行必要的命令。或者在纸上草绘UI，拍照，然后让CLI生成相应的React组件。这不是科幻小说，这就是Gemini CLI今天所能实现的。</p>
+                </div>
+                <a href="https://medium.com/@creativeaininja/mastering-the-gemini-cli-cb6f1cb7d6eb" target="_blank" class="read-more">阅读全文 →</a>
+            </div>
+
+            <div class="blog-post">
+                <h3>Gemini CLI: 你的新AI驱动命令行伙伴</h3>
+                <div class="meta">
+                    <span class="source">来源: Medium</span>
+                    <span class="date">2025年6月</span>
+                    <span class="author">作者: Andres Sandoval</span>
+                </div>
+                <div class="content">
+                    <p>Gemini CLI是一个免费开源的AI助手，它将会话式AI的强大功能直接带入你的终端。它具有强大的功能，包括网络搜索、文件操作、命令执行以及使用自然语言自动化任务。</p>
+                    <p>与传统的AI助手不同，Gemini CLI直接在你的终端环境中运行。它可以执行shell命令，搜索你的文件系统，修改你的PATH，并处理开发人员和高级用户每天面临的各种技术任务。</p>
+                </div>
+                <a href="https://andresand.medium.com/gemini-cli-your-new-ai-powered-command-line-companion-0d9b4f1377e7" target="_blank" class="read-more">阅读全文 →</a>
+            </div>
+
+            <div class="blog-post">
+                <h3>Gemini CLI 完整教程</h3>
+                <div class="meta">
+                    <span class="source">来源: DEV.to</span>
+                    <span class="date">2025年6月27日</span>
+                    <span class="author">作者: Vladislav Guzey</span>
+                </div>
+                <div class="content">
+                    <p>你是否曾经希望在终端窗口中拥有一个AI助手？你的梦想成真了，因为谷歌刚刚发布了Gemini CLI。在本教程中，我将向你展示关于这个新的开源AI助手的所有知识。我们将介绍如何使用它，定价以及一些有用的技巧和窍门。</p>
+                    <p>Gemini CLI是一个免费的开源AI助手，直接在你的终端中工作。这个强大的工具将谷歌的Gemini模型带到你的命令行，允许通过自然语言交互完成工作。你可以要求它编写和解释代码、编辑文件、解释错误、运行shell命令等等！</p>
+                </div>
+                <a href="https://dev.to/proflead/gemini-cli-full-tutorial-2ab5" target="_blank" class="read-more">阅读全文 →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 geminicli.mygrow.top - An unofficial fan-made resource hub for Google's Gemini CLI.</p>
+            <p>This site is not affiliated with Google. All product names, logos, and brands are property of their respective owners.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
