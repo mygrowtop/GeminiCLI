@@ -315,10 +315,23 @@ section {
 
 .tutorial-card {
     background-color: #fff;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+}
+
+.tutorial-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.tutorial-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: #333;
 }
 
 .tutorial-card:hover {
@@ -327,8 +340,12 @@ section {
 
 .read-more {
     display: inline-block;
-    margin-top: 1rem;
     font-weight: 500;
+    color: var(--primary-color);
+}
+
+.read-more:hover {
+    text-decoration: underline;
 }
 
 /* Tutorial Page Styles */
