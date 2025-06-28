@@ -50,6 +50,7 @@
                         <li><a href="#getting-started">Getting Started</a></li>
                         <li><a href="#basic-commands">Basic Commands</a></li>
                         <li><a href="#advanced-usage">Advanced Usage</a></li>
+                        <li><a href="#power-features">Power Features</a></li>
                         <li><a href="#customization">Customization</a></li>
                         <li><a href="#tips-tricks">Tips & Tricks</a></li>
                     </ul>
@@ -61,12 +62,22 @@
                         
                         <div class="tutorial-step">
                             <h3>1. Installation</h3>
-                            <p>Installing Gemini CLI is straightforward with npm:</p>
-                            <div class="code-block">npm i -g @gemini/gemini-cli</div>
-                            <p>For yarn users:</p>
-                            <div class="code-block">yarn global add @gemini/gemini-cli</div>
-                            <p>If you prefer to use it without installing globally:</p>
-                            <div class="code-block">npx @gemini/gemini-cli</div>
+                            <p>Official installation methods for Gemini CLI:</p>
+                            
+                            <p><strong>Method 1: Run directly from GitHub (no installation required)</strong></p>
+                            <div class="code-block">npx @google/gemini-cli</div>
+                            
+                            <p><strong>Method 2: Global installation (recommended)</strong></p>
+                            <div class="code-block">npm install -g @google/gemini-cli</div>
+                            <p>After installation, you can use it directly:</p>
+                            <div class="code-block">gemini</div>
+                            
+                            <p><strong>Note:</strong></p>
+                            <ul>
+                                <li>Make sure your Node.js version is 18 or higher</li>
+                                <li>You might need to use <code>sudo</code> on Linux/Mac if you encounter permission issues</li>
+                                <li>If you have problems running directly from GitHub, try the second installation method</li>
+                            </ul>
                         </div>
                         
                         <div class="tutorial-step">
@@ -90,8 +101,35 @@
                             <h3>3. Verify Installation</h3>
                             <p>Verify that Gemini CLI is installed correctly:</p>
                             <div class="code-block">gemini --version</div>
-                            <p>Test that your API key is working:</p>
-                            <div class="code-block">gemini ask "Hello, what can you do for me?"</div>
+                            
+                            <p>When running for the first time, you will see the following steps:</p>
+                            <ol>
+                                <li>Choose a color theme (you can select from multiple options that suit your terminal)</li>
+                                <li>Authenticate (you can use either your personal Google account or an API key)</li>
+                            </ol>
+                            
+                            <p>Simple test:</p>
+                            <div class="code-block">gemini</div>
+                            <p>Then at the prompt, enter:</p>
+                            <div class="code-block">> Hello, what can you do for me?</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>4. Real-world Examples</h3>
+                            
+                            <p><strong>Exploring a New Codebase</strong></p>
+                            <div class="code-block">cd your-project-directory</div>
+                            <div class="code-block">gemini</div>
+                            <div class="code-block">> Describe the main pieces of this system's architecture.</div>
+                            
+                            <p><strong>Working with Existing Code</strong></p>
+                            <div class="code-block">cd your-project-directory</div>
+                            <div class="code-block">gemini</div>
+                            <div class="code-block">> Help me migrate this codebase to the latest version of Java. Start with a plan.</div>
+                            
+                            <p><strong>Automating Workflows</strong></p>
+                            <div class="code-block">gemini</div>
+                            <div class="code-block">> Make me a slide deck showing the git history from the last 7 days, grouped by feature and team member.</div>
                         </div>
                     </div>
 
@@ -153,6 +191,63 @@
                             <h3>Shell Integration</h3>
                             <p>Use Gemini to help with shell commands:</p>
                             <div class="code-block">gemini shell "How to find all files modified in the last 7 days"</div>
+                        </div>
+                    </div>
+
+                    <div id="power-features" class="tutorial-section">
+                        <h2>Power Features</h2>
+                        
+                        <div class="tutorial-step">
+                            <h3>MCP Servers (Model Context Protocol)</h3>
+                            <p>Connect to MCP servers to extend Gemini's capabilities:</p>
+                            <div class="code-block">gemini chat</div>
+                            <p>Inside the chat session:</p>
+                            <div class="code-block">/mcp connect http://localhost:3000</div>
+                            <p>You can also specify MCP servers at startup:</p>
+                            <div class="code-block">gemini chat --mcp http://localhost:3000</div>
+                            <p>MCP servers help Gemini integrate with services like:</p>
+                            <ul>
+                                <li>Image generation with Imagen</li>
+                                <li>Video generation with Veo</li>
+                                <li>Music generation with Lyria</li>
+                                <li>Custom enterprise services</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Built-in Tools</h3>
+                            <p>Gemini CLI includes powerful built-in tools:</p>
+                            <ul>
+                                <li><strong>grep</strong>: Search for patterns in files</li>
+                                <li><strong>terminal</strong>: Execute shell commands</li>
+                                <li><strong>file read/write</strong>: Manipulate file contents</li>
+                                <li><strong>web search</strong>: Search the internet for information</li>
+                                <li><strong>web fetch</strong>: Download content from URLs</li>
+                            </ul>
+                            <p>To see available tools in chat:</p>
+                            <div class="code-block">/tools list</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Special Commands</h3>
+                            <p>Gemini CLI supports special commands in chat mode:</p>
+                            <ul>
+                                <li><strong>/memory</strong>: Work with Gemini's long-term memory</li>
+                                <li><strong>/stats</strong>: Display statistics about your current session</li>
+                                <li><strong>/tools</strong>: Manage and use built-in tools</li>
+                                <li><strong>/mcp</strong>: Connect and manage MCP servers</li>
+                            </ul>
+                            <p>For example, to save something to memory:</p>
+                            <div class="code-block">/memory save "My project uses React 18 and TypeScript 5"</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Context Window</h3>
+                            <p>Gemini CLI can handle large codebases with its 1M token context window:</p>
+                            <div class="code-block">gemini chat</div>
+                            <p>Then ask about your codebase:</p>
+                            <div class="code-block">What's the architecture of this project?</div>
+                            <p>Gemini will analyze your files and provide insights, all while keeping the context in memory.</p>
                         </div>
                     </div>
 

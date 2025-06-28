@@ -74,14 +74,17 @@
                     <div class="faq-container">
                         <div class="faq-item">
                             <h3>Q: How do I install Gemini CLI?</h3>
-                            <p>A: You can install Gemini CLI using npm:</p>
-                            <div class="code-block">npm i -g @gemini/gemini-cli</div>
-                            <p>For detailed installation instructions, see our <a href="tutorial.html#getting-started">Getting Started guide</a>.</p>
+                            <p>A: Official installation methods for Gemini CLI:</p>
+                            <p>Method 1: Run directly from GitHub (no installation required)</p>
+                            <div class="code-block">npx @google/gemini-cli</div>
+                            <p>Method 2: Global installation (recommended)</p>
+                            <div class="code-block">npm install -g @google/gemini-cli</div>
+                            <p>After installation, you can use the <code>gemini</code> command directly.</p>
                         </div>
 
                         <div class="faq-item">
                             <h3>Q: What are the system requirements?</h3>
-                            <p>A: Gemini CLI works on Windows, macOS, and Linux. It requires Node.js version 14 or higher and an internet connection to communicate with Google's API servers.</p>
+                            <p>A: Gemini CLI works on Windows, macOS, and Linux. It requires Node.js version 18 or higher and an internet connection to communicate with Google's API servers.</p>
                         </div>
 
                         <div class="faq-item">
@@ -129,6 +132,51 @@
                             <h3>Q: How can I monitor my API usage?</h3>
                             <p>A: You can monitor your API usage through the Google Cloud Console. Gemini CLI also includes a command to check your current usage:</p>
                             <div class="code-block">gemini quota</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h2>Advanced Features</h2>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <h3>Q: What is MCP and how do I use it?</h3>
+                            <p>A: MCP (Model Context Protocol) is a protocol that allows Gemini to interact with external servers. Through MCP, Gemini CLI can connect to services that provide additional functionality, such as file operations, web searching, image generation, and more.</p>
+                            <p>Connect to an MCP server:</p>
+                            <div class="code-block">gemini chat --mcp http://localhost:3000</div>
+                            <p>Or use the command in chat:</p>
+                            <div class="code-block">/mcp connect http://localhost:3000</div>
+                        </div>
+
+                        <div class="faq-item">
+                            <h3>Q: What built-in tools does Gemini CLI provide?</h3>
+                            <p>A: Gemini CLI includes several powerful built-in tools:</p>
+                            <ul>
+                                <li><strong>grep</strong>: Search for patterns in files</li>
+                                <li><strong>terminal</strong>: Execute shell commands</li>
+                                <li><strong>file-read/write</strong>: Read and write files</li>
+                                <li><strong>web-search</strong>: Search the internet for information</li>
+                                <li><strong>web-fetch</strong>: Download content from URLs</li>
+                                <li><strong>memory</strong>: Store and retrieve long-term memories</li>
+                            </ul>
+                            <p>To see available tools in chat:</p>
+                            <div class="code-block">/tools list</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>Q: What is the Memory feature and how does it work?</h3>
+                            <p>A: The Memory feature allows Gemini CLI to store and retrieve information, even between sessions. This is particularly useful for project-specific context, personal preferences, or commonly used settings.</p>
+                            <p>Save a memory:</p>
+                            <div class="code-block">/memory save "My project uses React 18 and TypeScript 5"</div>
+                            <p>List all memories:</p>
+                            <div class="code-block">/memory list</div>
+                            <p>Delete a memory:</p>
+                            <div class="code-block">/memory delete memoryID</div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h3>Q: How large a codebase can Gemini CLI handle?</h3>
+                            <p>A: Gemini CLI supports up to a 1M token context window, meaning it can process and understand large codebases. This enables it to analyze entire project structures, understand relationships between files, and answer questions in the context of the whole codebase.</p>
                         </div>
                     </div>
                 </div>

@@ -165,35 +165,126 @@
                     <div class="icon">
                         <i class="fas fa-project-diagram"></i>
                     </div>
-                    <h2>Project Management & Planning</h2>
+                    <h2>Large Codebase Analysis</h2>
                 </div>
                 <div class="use-case-details">
-                    <p class="use-case-intro">Plan projects, generate tasks, create schedules, and organize work directly from your command line.</p>
+                    <p class="use-case-intro">Leverage Gemini CLI's 1M token context window to analyze and manipulate large codebases.</p>
                     
                     <div class="use-case-example">
-                        <h3>Project Planning</h3>
-                        <p>Create project outlines:</p>
-                        <div class="code-block">gemini plan "Create a development roadmap for building a weather app with React"</div>
+                        <h3>Codebase Architecture Understanding</h3>
+                        <p>Quickly understand the structure of complex codebases:</p>
+                        <div class="code-block">cd your-complex-project</div>
+                        <div class="code-block">gemini</div>
+                        <div class="code-block">> Describe the architecture of this codebase and explain how the main components interact.</div>
                         <p class="example-result">
-                            Gemini will provide a structured project plan with phases, tasks, and estimated timelines.
+                            Gemini will analyze the codebase structure, identify key components, and explain how they interact.
                         </p>
                     </div>
                     
                     <div class="use-case-example">
-                        <h3>Task Breakdown</h3>
-                        <p>Generate detailed task lists:</p>
-                        <div class="code-block">gemini tasks "Break down the process of implementing user authentication in a Node.js application"</div>
+                        <h3>Code Improvement Suggestions</h3>
+                        <p>Get comprehensive code improvement recommendations:</p>
+                        <div class="code-block">gemini</div>
+                        <div class="code-block">> Analyze this codebase for potential security vulnerabilities and suggest improvements.</div>
                         <p class="example-result">
-                            Gemini will create a comprehensive list of tasks with dependencies and implementation details.
+                            Gemini will scan the entire codebase, identify potential security vulnerabilities and provide fix recommendations.
                         </p>
                     </div>
                     
                     <div class="use-case-example">
-                        <h3>Meeting Preparation</h3>
-                        <p>Prepare for meetings efficiently:</p>
-                        <div class="code-block">gemini prepare "Generate an agenda and talking points for a sprint planning meeting"</div>
+                        <h3>Large-scale Code Changes</h3>
+                        <p>Implement consistent changes across multiple files:</p>
+                        <div class="code-block">gemini</div>
+                        <div class="code-block">> Update all API endpoints to use the new authentication middleware.</div>
                         <p class="example-result">
-                            Gemini will create a well-structured meeting agenda with key topics and discussion points.
+                            Gemini will locate all API endpoint files and help implement consistent changes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-category">
+                <div class="use-case-header">
+                    <div class="icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h2>Multimodal Application Development</h2>
+                </div>
+                <div class="use-case-details">
+                    <p class="use-case-intro">Use Gemini's multimodal capabilities to generate applications from PDFs, images, or sketches.</p>
+                    
+                    <div class="use-case-example">
+                        <h3>Creating Apps from Designs</h3>
+                        <p>Convert UI sketches to actual code:</p>
+                        <div class="code-block">gemini</div>
+                        <div class="code-block">> Generate a React component based on this design</div>
+                        <div class="code-block">/tools web-fetch https://example.com/design-mockup.png</div>
+                        <p class="example-result">
+                            Gemini will analyze the design and generate React component code that matches the design.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Extracting Information from PDFs</h3>
+                        <p>Process structured documents:</p>
+                        <div class="code-block">gemini</div>
+                        <div class="code-block">> Extract all tables from this technical specification and convert them to JSON</div>
+                        <div class="code-block">/tools file-read specification.pdf</div>
+                        <p class="example-result">
+                            Gemini will process the PDF document, extract tables and convert them to structured JSON data.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Processing Charts and Graphics</h3>
+                        <p>Understand and process graphical data:</p>
+                        <div class="code-block">gemini</div>
+                        <div class="code-block">> Analyze this chart and explain what trends it shows</div>
+                        <div class="code-block">/tools file-read sales-chart.png</div>
+                        <p class="example-result">
+                            Gemini will analyze the chart, identify trends and provide data insights.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="use-case-category">
+                <div class="use-case-header">
+                    <div class="icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h2>Automated Development Tasks</h2>
+                </div>
+                <div class="use-case-details">
+                    <p class="use-case-intro">Automate complex development tasks through built-in tools and MCP protocol.</p>
+                    
+                    <div class="use-case-example">
+                        <h3>Pull Request Processing</h3>
+                        <p>Automatically analyze and process PRs:</p>
+                        <div class="code-block">gemini</div>
+                        <div class="code-block">> Summarize all open PRs in this repository and identify any that need immediate attention</div>
+                        <p class="example-result">
+                            Gemini will query GitHub, analyze all open PRs, and highlight issues that need attention.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Automated Code Refactoring</h3>
+                        <p>Execute complex code refactoring:</p>
+                        <div class="code-block">gemini</div>
+                        <div class="code-block">> Refactor all class-based components to functional components with hooks</div>
+                        <p class="example-result">
+                            Gemini will identify all class components and convert them to functional components using React Hooks.
+                        </p>
+                    </div>
+                    
+                    <div class="use-case-example">
+                        <h3>Multi-tool Integrated Workflows</h3>
+                        <p>Combine multiple tools into a single workflow:</p>
+                        <div class="code-block">gemini</div>
+                        <div class="code-block">> Set up a CI/CD pipeline for this project using GitHub Actions</div>
+                        <p class="example-result">
+                            Gemini will analyze the project, generate appropriate GitHub Actions configuration files, and guide you through the setup process.
                         </p>
                     </div>
                 </div>

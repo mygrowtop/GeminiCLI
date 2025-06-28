@@ -249,6 +249,8 @@
                     <ul>
                         <li><a href="#basic-commands">Basic Commands</a></li>
                         <li><a href="#advanced-commands">Advanced Commands</a></li>
+                        <li><a href="#chat-commands">Chat Commands</a></li>
+                        <li><a href="#mcp-tools">MCP & Tools</a></li>
                         <li><a href="#file-operations">File Operations</a></li>
                         <li><a href="#configuration">Configuration</a></li>
                         <li><a href="#best-practices">Best Practices</a></li>
@@ -360,6 +362,114 @@
                         </div>
                     </div>
 
+                    <div id="chat-commands" class="command-section">
+                        <h2>Chat Commands</h2>
+                        <p>Special commands that can be used in interactive chat sessions (prefixed with "/")</p>
+                        
+                        <div class="command-card">
+                            <h3>/memory <span class="command-tag">Memory Management</span></h3>
+                            <p>Save and manage memories between sessions</p>
+                            
+                            <h4>Syntax</h4>
+                            <div class="syntax">/memory [subcommand] [content]</div>
+                            
+                            <h4>Subcommands</h4>
+                            <ul class="options-list">
+                                <li><strong>save</strong> - Save a new memory</li>
+                                <li><strong>list</strong> - List all memories</li>
+                                <li><strong>delete</strong> - Delete a specific memory</li>
+                            </ul>
+                            
+                            <h4>Examples</h4>
+                            <p class="example-title">Save a memory</p>
+                            <div class="syntax">/memory save "My project uses React 18 and TypeScript 5"</div>
+                            
+                            <p class="example-title">List memories</p>
+                            <div class="syntax">/memory list</div>
+                        </div>
+                        
+                        <div class="command-card">
+                            <h3>/stats <span class="command-tag">Statistics</span></h3>
+                            <p>View statistics for the current session</p>
+                            
+                            <h4>Syntax</h4>
+                            <div class="syntax">/stats</div>
+                            
+                            <h4>Description</h4>
+                            <p>Displays token usage information for the current session, including total tokens used and number of requests to different models.</p>
+                        </div>
+                        
+                        <div class="command-card">
+                            <h3>/clear <span class="command-tag">Clear</span></h3>
+                            <p>Clear the current session history</p>
+                            
+                            <h4>Syntax</h4>
+                            <div class="syntax">/clear</div>
+                            
+                            <h4>Description</h4>
+                            <p>Resets the current session, clearing all history but maintaining authentication.</p>
+                        </div>
+                    </div>
+
+                    <div id="mcp-tools" class="command-section">
+                        <h2>MCP & Tools</h2>
+                        <p>Commands for using Model Context Protocol (MCP) and built-in tools</p>
+                        
+                        <div class="command-card">
+                            <h3>/mcp <span class="command-tag">MCP Protocol</span></h3>
+                            <p>Connect and manage MCP servers</p>
+                            
+                            <h4>Syntax</h4>
+                            <div class="syntax">/mcp [subcommand] [url]</div>
+                            
+                            <h4>Subcommands</h4>
+                            <ul class="options-list">
+                                <li><strong>connect</strong> - Connect to an MCP server</li>
+                                <li><strong>disconnect</strong> - Disconnect from MCP server</li>
+                                <li><strong>list</strong> - List currently connected MCP servers</li>
+                            </ul>
+                            
+                            <h4>Examples</h4>
+                            <p class="example-title">Connect to a server</p>
+                            <div class="syntax">/mcp connect http://localhost:3000</div>
+                            
+                            <p class="example-title">View connection status</p>
+                            <div class="syntax">/mcp list</div>
+                        </div>
+                        
+                        <div class="command-card">
+                            <h3>/tools <span class="command-tag">Built-in Tools</span></h3>
+                            <p>Manage and use Gemini's built-in tools</p>
+                            
+                            <h4>Syntax</h4>
+                            <div class="syntax">/tools [subcommand]</div>
+                            
+                            <h4>Subcommands</h4>
+                            <ul class="options-list">
+                                <li><strong>list</strong> - List all available tools</li>
+                                <li><strong>describe</strong> - Show details for a specific tool</li>
+                                <li><strong>enable</strong> - Enable a specific tool</li>
+                                <li><strong>disable</strong> - Disable a specific tool</li>
+                            </ul>
+                            
+                            <h4>Common Built-in Tools</h4>
+                            <ul class="options-list">
+                                <li><strong>grep</strong> - Search for patterns in files</li>
+                                <li><strong>terminal</strong> - Execute shell commands</li>
+                                <li><strong>file-read/write</strong> - Read and write files</li>
+                                <li><strong>web-search</strong> - Search the internet for information</li>
+                                <li><strong>web-fetch</strong> - Download content from URLs</li>
+                            </ul>
+                            
+                            <h4>Examples</h4>
+                            <p class="example-title">List tools</p>
+                            <div class="syntax">/tools list</div>
+                            
+                            <p class="example-title">Use web-search tool</p>
+                            <div class="syntax">/tools web-search "latest JavaScript framework trends"</div>
+                        </div>
+                    </div>
+
                     <div id="file-operations" class="command-section">
                         <h2>File Operations</h2>
                         <p>Commands for reading, analyzing, and processing files</p>
@@ -456,7 +566,7 @@
                     </div>
 
                     <div class="attribution">
-                        <p>Command reference information sourced from <a href="https://geminicli.info/commands.html" target="_blank">geminicli.info</a></p>
+                        <p>Command reference information sourced from <a href="https://github.com/google-gemini/gemini-cli/tree/main/docs" target="_blank">Official Gemini CLI Documentation</a></p>
                     </div>
                 </div>
             </div>
