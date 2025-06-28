@@ -455,15 +455,44 @@ footer {
     background-color: var(--dark-bg);
     color: var(--text-light);
     padding: 3rem 0;
-    text-align: center;
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-between;
+    gap: 2rem;
     margin-bottom: 2rem;
+}
+
+/* 蓝色框 - Logo区域 */
+.footer-logo {
+    border: 1px solid #3551FF;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+}
+
+.footer-logo-img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+/* 绿色框 - 链接区域 */
+.footer-links-container {
+    display: flex;
+    gap: 3rem;
+    border: 1px solid #4CAF50;
+    padding: 1.5rem;
 }
 
 .footer-nav, .footer-links {
@@ -493,6 +522,19 @@ footer {
 .footer-nav a:hover, .footer-links a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
+}
+
+/* 红色框 - 版权信息区域 */
+.footer-copyright {
+    border: 1px solid #F44336;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-copyright p {
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+    font-size: 0.9rem;
 }
 
 /* FAQ Page Styles */
