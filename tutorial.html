@@ -42,167 +42,169 @@
 
     <section class="tutorials-content">
         <div class="container">
-            <div class="tutorial-nav">
-                <h3>Quick Navigation</h3>
-                <ul>
-                    <li><a href="#getting-started">Getting Started</a></li>
-                    <li><a href="#basic-commands">Basic Commands</a></li>
-                    <li><a href="#advanced-usage">Advanced Usage</a></li>
-                    <li><a href="#customization">Customization</a></li>
-                    <li><a href="#tips-tricks">Tips & Tricks</a></li>
-                </ul>
-            </div>
-
-            <div class="tutorial-sections">
-                <div id="getting-started" class="tutorial-section">
-                    <h2>Getting Started with Gemini CLI</h2>
-                    
-                    <div class="tutorial-step">
-                        <h3>1. Installation</h3>
-                        <p>Installing Gemini CLI is straightforward with npm:</p>
-                        <div class="code-block">npm i -g @gemini/gemini-cli</div>
-                        <p>For yarn users:</p>
-                        <div class="code-block">yarn global add @gemini/gemini-cli</div>
-                        <p>If you prefer to use it without installing globally:</p>
-                        <div class="code-block">npx @gemini/gemini-cli</div>
-                    </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>2. Getting Your API Key</h3>
-                        <p>To use Gemini CLI, you'll need an API key from Google AI Studio:</p>
-                        <ol>
-                            <li>Go to <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a></li>
-                            <li>Sign in with your Google account</li>
-                            <li>Navigate to the API keys section</li>
-                            <li>Create a new API key</li>
-                        </ol>
-                        <p>Once you have your key, set it in your environment:</p>
-                        <div class="code-block">export GEMINI_API_KEY=your_api_key_here</div>
-                        <p>For Windows users:</p>
-                        <div class="code-block">set GEMINI_API_KEY=your_api_key_here</div>
-                        <p>For persistent configuration, add it to your shell profile or use the CLI config:</p>
-                        <div class="code-block">gemini config set apiKey your_api_key_here</div>
-                    </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>3. Verify Installation</h3>
-                        <p>Verify that Gemini CLI is installed correctly:</p>
-                        <div class="code-block">gemini --version</div>
-                        <p>Test that your API key is working:</p>
-                        <div class="code-block">gemini ask "Hello, what can you do for me?"</div>
-                    </div>
+            <div class="tutorials-layout">
+                <div class="tutorial-nav">
+                    <h3>Quick Navigation</h3>
+                    <ul>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#basic-commands">Basic Commands</a></li>
+                        <li><a href="#advanced-usage">Advanced Usage</a></li>
+                        <li><a href="#customization">Customization</a></li>
+                        <li><a href="#tips-tricks">Tips & Tricks</a></li>
+                    </ul>
                 </div>
 
-                <div id="basic-commands" class="tutorial-section">
-                    <h2>Basic Commands</h2>
-                    
-                    <div class="tutorial-step">
-                        <h3>Chat Mode</h3>
-                        <p>Start an interactive chat session:</p>
-                        <div class="code-block">gemini chat</div>
-                        <p>This opens an interactive session where you can have a conversation with Gemini.</p>
+                <div class="tutorial-sections">
+                    <div id="getting-started" class="tutorial-section">
+                        <h2>Getting Started with Gemini CLI</h2>
+                        
+                        <div class="tutorial-step">
+                            <h3>1. Installation</h3>
+                            <p>Installing Gemini CLI is straightforward with npm:</p>
+                            <div class="code-block">npm i -g @gemini/gemini-cli</div>
+                            <p>For yarn users:</p>
+                            <div class="code-block">yarn global add @gemini/gemini-cli</div>
+                            <p>If you prefer to use it without installing globally:</p>
+                            <div class="code-block">npx @gemini/gemini-cli</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>2. Getting Your API Key</h3>
+                            <p>To use Gemini CLI, you'll need an API key from Google AI Studio:</p>
+                            <ol>
+                                <li>Go to <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a></li>
+                                <li>Sign in with your Google account</li>
+                                <li>Navigate to the API keys section</li>
+                                <li>Create a new API key</li>
+                            </ol>
+                            <p>Once you have your key, set it in your environment:</p>
+                            <div class="code-block">export GEMINI_API_KEY=your_api_key_here</div>
+                            <p>For Windows users:</p>
+                            <div class="code-block">set GEMINI_API_KEY=your_api_key_here</div>
+                            <p>For persistent configuration, add it to your shell profile or use the CLI config:</p>
+                            <div class="code-block">gemini config set apiKey your_api_key_here</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>3. Verify Installation</h3>
+                            <p>Verify that Gemini CLI is installed correctly:</p>
+                            <div class="code-block">gemini --version</div>
+                            <p>Test that your API key is working:</p>
+                            <div class="code-block">gemini ask "Hello, what can you do for me?"</div>
+                        </div>
                     </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>One-off Questions</h3>
-                        <p>For quick questions without starting a chat:</p>
-                        <div class="code-block">gemini ask "How do I check disk space on Linux?"</div>
-                    </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>Code Generation</h3>
-                        <p>Generate code directly:</p>
-                        <div class="code-block">gemini code "Create a Python function to fetch JSON data from an API"</div>
-                    </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>Summarizing Text</h3>
-                        <p>Summarize text content:</p>
-                        <div class="code-block">gemini summarize --file document.txt</div>
-                        <p>Or pipe content:</p>
-                        <div class="code-block">cat document.txt | gemini summarize</div>
-                    </div>
-                </div>
 
-                <div id="advanced-usage" class="tutorial-section">
-                    <h2>Advanced Usage</h2>
-                    
-                    <div class="tutorial-step">
-                        <h3>Working with Files</h3>
-                        <p>Process file content:</p>
-                        <div class="code-block">gemini ask --file code.js "Explain what this code does"</div>
-                        <p>Generate content to a file:</p>
-                        <div class="code-block">gemini code "Create a React component for a login form" > LoginForm.jsx</div>
+                    <div id="basic-commands" class="tutorial-section">
+                        <h2>Basic Commands</h2>
+                        
+                        <div class="tutorial-step">
+                            <h3>Chat Mode</h3>
+                            <p>Start an interactive chat session:</p>
+                            <div class="code-block">gemini chat</div>
+                            <p>This opens an interactive session where you can have a conversation with Gemini.</p>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>One-off Questions</h3>
+                            <p>For quick questions without starting a chat:</p>
+                            <div class="code-block">gemini ask "How do I check disk space on Linux?"</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Code Generation</h3>
+                            <p>Generate code directly:</p>
+                            <div class="code-block">gemini code "Create a Python function to fetch JSON data from an API"</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Summarizing Text</h3>
+                            <p>Summarize text content:</p>
+                            <div class="code-block">gemini summarize --file document.txt</div>
+                            <p>Or pipe content:</p>
+                            <div class="code-block">cat document.txt | gemini summarize</div>
+                        </div>
                     </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>Custom Model Selection</h3>
-                        <p>Choose specific Gemini models:</p>
-                        <div class="code-block">gemini ask --model gemini-pro-vision "Describe this image" --file image.jpg</div>
-                    </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>Streaming Responses</h3>
-                        <p>Enable streaming for real-time responses:</p>
-                        <div class="code-block">gemini ask --stream "Write a short story about a robot"</div>
-                    </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>Shell Integration</h3>
-                        <p>Use Gemini to help with shell commands:</p>
-                        <div class="code-block">gemini shell "How to find all files modified in the last 7 days"</div>
-                    </div>
-                </div>
 
-                <div id="customization" class="tutorial-section">
-                    <h2>Customization</h2>
-                    
-                    <div class="tutorial-step">
-                        <h3>Configuration Settings</h3>
-                        <p>View current configuration:</p>
-                        <div class="code-block">gemini config list</div>
-                        <p>Set a configuration value:</p>
-                        <div class="code-block">gemini config set temperature 0.7</div>
+                    <div id="advanced-usage" class="tutorial-section">
+                        <h2>Advanced Usage</h2>
+                        
+                        <div class="tutorial-step">
+                            <h3>Working with Files</h3>
+                            <p>Process file content:</p>
+                            <div class="code-block">gemini ask --file code.js "Explain what this code does"</div>
+                            <p>Generate content to a file:</p>
+                            <div class="code-block">gemini code "Create a React component for a login form" > LoginForm.jsx</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Custom Model Selection</h3>
+                            <p>Choose specific Gemini models:</p>
+                            <div class="code-block">gemini ask --model gemini-pro-vision "Describe this image" --file image.jpg</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Streaming Responses</h3>
+                            <p>Enable streaming for real-time responses:</p>
+                            <div class="code-block">gemini ask --stream "Write a short story about a robot"</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Shell Integration</h3>
+                            <p>Use Gemini to help with shell commands:</p>
+                            <div class="code-block">gemini shell "How to find all files modified in the last 7 days"</div>
+                        </div>
                     </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>Custom Aliases</h3>
-                        <p>Create command aliases for frequent operations:</p>
-                        <div class="code-block">gemini alias add explain="ask 'Explain the following code:'"</div>
-                        <p>Then use your alias:</p>
-                        <div class="code-block">gemini explain --file script.py</div>
-                    </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>Creating Custom Instructions</h3>
-                        <p>Set persistent system instructions:</p>
-                        <div class="code-block">gemini config set systemInstruction "You are a helpful assistant specializing in JavaScript development."</div>
-                    </div>
-                </div>
 
-                <div id="tips-tricks" class="tutorial-section">
-                    <h2>Tips & Tricks</h2>
-                    
-                    <div class="tutorial-step">
-                        <h3>Saving Chat History</h3>
-                        <p>Export your chat history to a file:</p>
-                        <div class="code-block">gemini chat --save chat_history.json</div>
-                        <p>Continue from a previous chat:</p>
-                        <div class="code-block">gemini chat --load chat_history.json</div>
+                    <div id="customization" class="tutorial-section">
+                        <h2>Customization</h2>
+                        
+                        <div class="tutorial-step">
+                            <h3>Configuration Settings</h3>
+                            <p>View current configuration:</p>
+                            <div class="code-block">gemini config list</div>
+                            <p>Set a configuration value:</p>
+                            <div class="code-block">gemini config set temperature 0.7</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Custom Aliases</h3>
+                            <p>Create command aliases for frequent operations:</p>
+                            <div class="code-block">gemini alias add explain="ask 'Explain the following code:'"</div>
+                            <p>Then use your alias:</p>
+                            <div class="code-block">gemini explain --file script.py</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Creating Custom Instructions</h3>
+                            <p>Set persistent system instructions:</p>
+                            <div class="code-block">gemini config set systemInstruction "You are a helpful assistant specializing in JavaScript development."</div>
+                        </div>
                     </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>Combining with Other Tools</h3>
-                        <p>Pipe from other commands:</p>
-                        <div class="code-block">git diff | gemini ask "Summarize these code changes"</div>
-                    </div>
-                    
-                    <div class="tutorial-step">
-                        <h3>Improving Response Quality</h3>
-                        <p>Be specific in your prompts for better results:</p>
-                        <div class="code-block">gemini ask "Write a Python function to parse CSV files that handles quoted fields and escaped quotes"</div>
-                        <p>Instead of just:</p>
-                        <div class="code-block">gemini ask "Write a CSV parser"</div>
+
+                    <div id="tips-tricks" class="tutorial-section">
+                        <h2>Tips & Tricks</h2>
+                        
+                        <div class="tutorial-step">
+                            <h3>Saving Chat History</h3>
+                            <p>Export your chat history to a file:</p>
+                            <div class="code-block">gemini chat --save chat_history.json</div>
+                            <p>Continue from a previous chat:</p>
+                            <div class="code-block">gemini chat --load chat_history.json</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Combining with Other Tools</h3>
+                            <p>Pipe from other commands:</p>
+                            <div class="code-block">git diff | gemini ask "Summarize these code changes"</div>
+                        </div>
+                        
+                        <div class="tutorial-step">
+                            <h3>Improving Response Quality</h3>
+                            <p>Be specific in your prompts for better results:</p>
+                            <div class="code-block">gemini ask "Write a Python function to parse CSV files that handles quoted fields and escaped quotes"</div>
+                            <p>Instead of just:</p>
+                            <div class="code-block">gemini ask "Write a CSV parser"</div>
+                        </div>
                     </div>
                 </div>
             </div>
